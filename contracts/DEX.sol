@@ -41,7 +41,7 @@ contract DEX is Ownable {
         return token.balanceOf(addr);
     }
 
-    function exchange(uint256 tokenAmountToExchange) public onlyOwner {
+    function exchange(uint256 tokenAmountToExchange) public {
         require(tokenAmountToExchange > 0, 'Must be over zero');
 
         uint256 balance = token.balanceOf(msg.sender);
